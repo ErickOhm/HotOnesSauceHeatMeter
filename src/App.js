@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
+
+import SeasonSelector from './components/SeasonSelector';
+import SeasonViewer from './components/SeasonViewer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: 'flex',
+        width: '100%',
+        height: '100%',
+      }}
+    >
+      <Switch>
+        <Route exact path="/" component={SeasonSelector} />
+        <Route path="/seasons/:season" component={SeasonSelector} />
+      </Switch>
+      <Switch>
+        <Route exact path="/seasons/:season" component={SeasonViewer} />
+        <Route path="/seasons/:season/sauces/:sauce_id" component={SeasonViewer} />
+      </Switch>
     </div>
   );
 }
