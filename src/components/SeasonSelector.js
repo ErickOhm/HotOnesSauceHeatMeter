@@ -64,7 +64,7 @@ const SeasonSelector = ({ classes, history, match }) => {
           seasons.map(({ file, name }, i) => (
             <div
               key={i}
-              className={`${classes.seasonButton} ${season === file ? classes.selected : ''}`}
+              className={`${classes.seasonButton} ${season == file ? classes.selected : ''}`}
               onClick={() => history.push(`/seasons/${file}`)}
             >
               {name}
