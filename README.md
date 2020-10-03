@@ -15,6 +15,9 @@
 
 ### ✨ [Demo](https://hotoneslist.onrender.com/)
 
+## Screenshot
+![Alt text](https://media.discordapp.net/attachments/734155057704075285/761750962440110080/unknown.png?width=975&height=475 "A screenshot of the project")
+
 ## Install
 
 ```sh
